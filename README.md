@@ -38,8 +38,7 @@ O recorte do projeto cobre o núcleo funcional do produto:
 - Um **usuário** pode comentar vários **tweets**, e um **tweet** pode ter vários **comentários** (1:N a partir do tweet, N:1 a partir do usuário)
 - Um **usuário** pode seguir vários **usuários**, e ser seguido por vários (N:N, auto-relacionamento resolvido pela entidade `seguidores`)
 
-## Diagrama ER
-## 📁 Modelos
+##  Modelos de Diagrama ER
 
 Os modelos do banco de dados estão na pasta [`modelos/`](./modelos), e serão incrementados ao longo do projeto.
 - [Modelo Lógico - v1](./modelos/modelo_logico_v1.pdf)
