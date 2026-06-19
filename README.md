@@ -5,10 +5,12 @@ Modelagem do banco de dados que sustentaria uma rede social no estilo **Twitter*
 ## Integrantes
 
 - João Victor Reis Lisboa
-
+- João Antonio Fragallo Ferreira
+- João Emannuel Neves De Brito
+  
 ## Sistema escolhido
 
-**Twitter (rede social de microblogging).**
+**Twitter**
 
 Pergunta-guia do projeto: como esse sistema foi (ou seria) desenvolvido por baixo do capô?
 
@@ -37,10 +39,10 @@ O recorte do projeto cobre o núcleo funcional do produto:
 - Um **usuário** pode seguir vários **usuários**, e ser seguido por vários (N:N, auto-relacionamento resolvido pela entidade `seguidores`)
 
 ## Diagrama ER
+## 📁 Modelos
 
-O diagrama foi modelado no [BRModelo Web](https://www.brmodeloweb.com) e está disponível em [`diagrams/er-diagram.png`](./diagrams/er-diagram.png).
-
-## Como rodar as migrações
+Os modelos do banco de dados estão na pasta [`modelos/`](./modelos), e serão incrementados ao longo do projeto.
+- [Modelo Lógico - v1](./modelos/modelo_logico_v1.pdf)
 
 O projeto usa o **Supabase** (PostgreSQL gerenciado) para desenvolvimento e testes.
 
