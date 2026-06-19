@@ -19,7 +19,7 @@ O recorte do projeto cobre o núcleo funcional do produto:
 - Publicação de tweets
 - Curtidas em tweets
 - Comentários (respostas) em tweets
-- Relação de "seguir" entre usuários (Aula 2 em diante)
+- Relação de "seguir" entre usuários
 
 ## Entidades principais (versão inicial)
 
