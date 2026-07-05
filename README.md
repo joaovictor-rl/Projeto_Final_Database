@@ -1,12 +1,12 @@
 # Projeto Final — Banco de Dados I (2026.2)
-
-Modelagem do banco de dados que sustentaria uma rede social no estilo **Twitter**: usuários publicando posts curtos (tweets), curtindo, comentando, seguindo outros usuários e usando hashtags.
+![Twitter Banner](aux/twitter_banner.png)
+Modelagem do banco de dados que sustentaria uma rede social no estilo **Twitter**: usuários publicando posts curtos (tweets), curtindo, comentando, seguindo outros usuários.
 
 ## Integrantes
 
-- João Victor Reis Lisboa
-- João Antonio Fragallo Ferreira
-- João Emannuel Neves De Brito
+- João Victor Reis Lisboa - 202511140001
+- João Antonio Fragallo Ferreira - 202511140010
+- João Emannuel Neves De Brito - 202511140004
   
 ## Sistema escolhido
 
