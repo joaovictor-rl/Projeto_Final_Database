@@ -1,5 +1,6 @@
 # Projeto Final — Banco de Dados I (2026.2)
-![Twitter Banner](aux/twitter_banner.png)
+<img src="aux/twitter_banner.png" width="100%" alt="Twitter Banner">
+
 Modelagem do banco de dados que sustentaria uma rede social no estilo **Twitter**: usuários publicando posts curtos (tweets), curtindo, comentando, seguindo outros usuários.
 
 ## Integrantes
