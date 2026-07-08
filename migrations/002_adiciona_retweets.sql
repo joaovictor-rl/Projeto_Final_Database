@@ -1,5 +1,4 @@
 -- Migração 002: Adiciona tabela de retweets
--- Motivação técnica: Permitir o compartilhamento de conteúdo existente mantendo a referência original.
 
 CREATE TABLE retweets (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
