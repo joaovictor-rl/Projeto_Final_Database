@@ -50,7 +50,7 @@ O recorte do projeto cobre o núcleo funcional do produto:
 
 Os modelos do banco de dados estão na pasta [`modelos/`](./modelos), e serão incrementados ao longo do projeto.
 - [Modelo Lógico - v1](./modelos/modelo_logico_v1.pdf)
-> Nota: o modelo lógico v1 reflete o schema inicial (migration 001). `retweets` e `favoritos` foram adicionados depois via migrations e serão incorporados na v2 do diagrama.
+- [Modelo Lógico - v2](./modelos/modelo_logico_v2.pdf)
 
 ## Como rodar no Supabase
 
