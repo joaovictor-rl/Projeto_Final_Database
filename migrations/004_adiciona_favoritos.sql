@@ -1,5 +1,4 @@
 -- Migração 004: Adiciona tabela de favoritos (bookmarks)
--- Motivação técnica: Permitir que usuários salvem tweets de forma privada.
 
 CREATE TABLE favoritos (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
