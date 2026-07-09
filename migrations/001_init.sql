@@ -8,7 +8,7 @@ CREATE TABLE usuarios (
     nome_usuario    VARCHAR(50) NOT NULL UNIQUE,   
     email           VARCHAR(150) NOT NULL UNIQUE,
     senha_hash      VARCHAR(255) NOT NULL,
-    data_criacao    TIMESTAMP NOT NULL DEFAULT NOW()
+    data_criacao    TIMESTAMP NOT NULL
 );
 
 CREATE TABLE tweets (
