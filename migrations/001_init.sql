@@ -7,7 +7,7 @@
 CREATE TABLE usuarios (
     id_usuario      SERIAL PRIMARY KEY,
     nome            VARCHAR(100) NOT NULL,
-    nome_usuario    VARCHAR(50) NOT NULL UNIQUE,   -- "@", deve ser único
+    nome_usuario    VARCHAR(50) NOT NULL UNIQUE,   
     email           VARCHAR(150) NOT NULL UNIQUE,
     senha_hash      VARCHAR(255) NOT NULL,
     data_criacao    TIMESTAMP NOT NULL DEFAULT NOW()
@@ -26,7 +26,7 @@ CREATE TABLE curtidas (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_tweet        INTEGER NOT NULL REFERENCES tweets(id_tweet) ON DELETE CASCADE,
     data_curtida    TIMESTAMP NOT NULL DEFAULT NOW(),
-    PRIMARY KEY (id_usuario, id_tweet)             -- um usuário só pode curtir um tweet uma vez
+    PRIMARY KEY (id_usuario, id_tweet)            
 );
 
 -- Tabela de comentários (respostas a um tweet)
@@ -44,5 +44,5 @@ CREATE TABLE seguidores (
     id_seguido      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     data_seguir     TIMESTAMP NOT NULL DEFAULT NOW(),
     PRIMARY KEY (id_seguidor, id_seguido),
-    CHECK (id_seguidor <> id_seguido)              -- usuário não pode seguir a si mesmo
+    CHECK (id_seguidor <> id_seguido)             
 );
