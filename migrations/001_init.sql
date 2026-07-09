@@ -2,8 +2,6 @@
 -- Sistema: Twitter
 -- Entidades: usuarios, tweets, curtidas, comentarios, seguidores
 
-
--- Tabela de usuários
 CREATE TABLE usuarios (
     id_usuario      SERIAL PRIMARY KEY,
     nome            VARCHAR(100) NOT NULL,
@@ -13,7 +11,6 @@ CREATE TABLE usuarios (
     data_criacao    TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
--- Tabela de tweets
 CREATE TABLE tweets (
     id_tweet        SERIAL PRIMARY KEY,
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
@@ -21,7 +18,6 @@ CREATE TABLE tweets (
     data_publicacao TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
--- Tabela de curtidas (relação N:N entre usuarios e tweets)
 CREATE TABLE curtidas (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_tweet        INTEGER NOT NULL REFERENCES tweets(id_tweet) ON DELETE CASCADE,
@@ -29,7 +25,6 @@ CREATE TABLE curtidas (
     PRIMARY KEY (id_usuario, id_tweet)            
 );
 
--- Tabela de comentários (respostas a um tweet)
 CREATE TABLE comentarios (
     id_comentario   SERIAL PRIMARY KEY,
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
@@ -38,7 +33,6 @@ CREATE TABLE comentarios (
     data_comentario TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
--- Tabela de seguidores (auto-relacionamento N:N entre usuarios)
 CREATE TABLE seguidores (
     id_seguidor     INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_seguido      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
