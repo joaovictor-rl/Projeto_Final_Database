@@ -15,13 +15,13 @@ CREATE TABLE tweets (
     id_tweet        SERIAL PRIMARY KEY,
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     conteudo        VARCHAR(280) NOT NULL,        
-    data_publicacao TIMESTAMP NOT NULL DEFAULT NOW()
+    data_publicacao TIMESTAMP NOT NULL
 );
 
 CREATE TABLE curtidas (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_tweet        INTEGER NOT NULL REFERENCES tweets(id_tweet) ON DELETE CASCADE,
-    data_curtida    TIMESTAMP NOT NULL DEFAULT NOW(),
+    data_curtida    TIMESTAMP NOT NULL,
     PRIMARY KEY (id_usuario, id_tweet)            
 );
 
@@ -30,13 +30,13 @@ CREATE TABLE comentarios (
     id_usuario      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_tweet        INTEGER NOT NULL REFERENCES tweets(id_tweet) ON DELETE CASCADE,
     conteudo        VARCHAR(280) NOT NULL,
-    data_comentario TIMESTAMP NOT NULL DEFAULT NOW()
+    data_comentario TIMESTAMP NOT NULL
 );
 
 CREATE TABLE seguidores (
     id_seguidor     INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     id_seguido      INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
-    data_seguir     TIMESTAMP NOT NULL DEFAULT NOW(),
+    data_seguir     TIMESTAMP NOT NULL,
     PRIMARY KEY (id_seguidor, id_seguido),
     CHECK (id_seguidor <> id_seguido)             
 );
