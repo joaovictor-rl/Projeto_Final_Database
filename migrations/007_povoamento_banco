@@ -1,0 +1,201 @@
+-- Migração 007: Povoamento inicial do banco de dados
+
+INSERT INTO usuarios (id_usuario, nome, nome_usuario, email, senha_hash, data_criacao, biografia, e_verificado, e_privado) VALUES
+(1, 'Ana Beatriz Souza',        'ana.souza',        'ana.souza@email.com',        '$2b$10$hashseed0000000000000001', '2025-01-10 09:00:00', 'Apaixonada por fotografia e viagens.', TRUE,  FALSE),
+(2, 'Bruno Costa Lima',         'bruno.lima',       'bruno.lima@email.com',       '$2b$10$hashseed0000000000000002', '2025-01-15 10:00:00', NULL,                                    FALSE, FALSE),
+(3, 'Carla Mendes Rocha',       'carla.mendes',     'carla.mendes@email.com',     '$2b$10$hashseed0000000000000003', '2025-02-01 11:00:00', 'Dev backend e amante de café.',        FALSE, FALSE),
+(4, 'Diego Ferreira Alves',     'diego.alves',      'diego.alves@email.com',      '$2b$10$hashseed0000000000000004', '2025-02-10 12:00:00', NULL,                                    FALSE, FALSE),
+(5, 'Elisa Martins Cruz',       'elisa.cruz',       'elisa.cruz@email.com',       '$2b$10$hashseed0000000000000005', '2025-02-20 13:00:00', 'Perfil privado para amigos.',          FALSE, TRUE),
+(6, 'Felipe Nascimento Reis',   'felipe.reis',      'felipe.reis@email.com',      '$2b$10$hashseed0000000000000006', '2025-03-01 09:30:00', NULL,                                    FALSE, FALSE),
+(7, 'Gabriela Oliveira Dias',   'gabriela.dias',    'gabriela.dias@email.com',    '$2b$10$hashseed0000000000000007', '2025-03-10 10:30:00', 'Estudante de design.',                 FALSE, FALSE),
+(8, 'Henrique Barros Teixeira', 'henrique.teixeira','henrique.teixeira@email.com','$2b$10$hashseed0000000000000008', '2025-03-20 11:30:00', NULL,                                    FALSE, FALSE),
+(9, 'Isabela Carvalho Pinto',   'isabela.pinto',    'isabela.pinto@email.com',    '$2b$10$hashseed0000000000000009', '2025-04-01 12:30:00', 'Curiosa por natureza.',                FALSE, FALSE),
+(10,'João Pedro Almeida Rocha', 'joao.rocha',       'joao.rocha@email.com',       '$2b$10$hashseed0000000000000010', '2025-04-10 13:30:00', 'Compartilhando ideias sobre tecnologia.', TRUE, FALSE),
+(11,'Karina Silva Nogueira',    'karina.nogueira',  'karina.nogueira@email.com',  '$2b$10$hashseed0000000000000011', '2025-04-20 09:00:00', NULL,                                    FALSE, FALSE),
+(12,'Lucas Andrade Ramos',      'lucas.ramos',      'lucas.ramos@email.com',      '$2b$10$hashseed0000000000000012', '2025-05-01 10:00:00', 'Só o essencial.',                      FALSE, TRUE),
+(13,'Mariana Ribeiro Castro',   'mariana.castro',   'mariana.castro@email.com',   '$2b$10$hashseed0000000000000013', '2025-05-10 11:00:00', NULL,                                    FALSE, FALSE),
+(14,'Nicolas Pereira Gomes',    'nicolas.gomes',    'nicolas.gomes@email.com',    '$2b$10$hashseed0000000000000014', '2025-05-20 12:00:00', NULL,                                    FALSE, FALSE),
+(15,'Otávio Barbosa Santos',    'otavio.santos',    'otavio.santos@email.com',    '$2b$10$hashseed0000000000000015', '2025-06-01 13:00:00', 'Verificado, fã de esportes.',          TRUE,  FALSE),
+(16,'Patrícia Lima Correia',    'patricia.correia', 'patricia.correia@email.com', '$2b$10$hashseed0000000000000016', '2025-06-10 09:00:00', NULL,                                    FALSE, FALSE),
+(17,'Rafael Souza Farias',      'rafael.farias',    'rafael.farias@email.com',    '$2b$10$hashseed0000000000000017', '2025-06-20 10:00:00', NULL,                                    FALSE, FALSE),
+(18,'Sabrina Torres Melo',      'sabrina.melo',     'sabrina.melo@email.com',     '$2b$10$hashseed0000000000000018', '2025-07-01 11:00:00', 'Leitora assídua.',                     FALSE, FALSE),
+(19,'Thiago Moraes Vieira',     'thiago.vieira',    'thiago.vieira@email.com',    '$2b$10$hashseed0000000000000019', '2025-07-10 12:00:00', NULL,                                    FALSE, FALSE),
+(20,'Ursula Campos Freitas',    'ursula.freitas',   'ursula.freitas@email.com',   '$2b$10$hashseed0000000000000020', '2025-07-20 13:00:00', 'Perfil privado.',                      FALSE, TRUE),
+(21,'Vinícius Rocha Batista',   'vinicius.batista', 'vinicius.batista@email.com', '$2b$10$hashseed0000000000000021', '2025-08-01 09:00:00', NULL,                                    FALSE, FALSE),
+(22,'Wendy Cardoso Nunes',      'wendy.nunes',      'wendy.nunes@email.com',      '$2b$10$hashseed0000000000000022', '2025-08-10 10:00:00', NULL,                                    FALSE, FALSE),
+(23,'Xavier Monteiro Duarte',   'xavier.duarte',    'xavier.duarte@email.com',    '$2b$10$hashseed0000000000000023', '2025-08-20 11:00:00', NULL,                                    FALSE, FALSE),
+(24,'Yasmin Azevedo Pires',     'yasmin.pires',     'yasmin.pires@email.com',     '$2b$10$hashseed0000000000000024', '2025-09-01 12:00:00', NULL,                                    FALSE, FALSE),
+(25,'Zeca Fontoura Guimarães',  'zeca.guimaraes',   'zeca.guimaraes@email.com',   '$2b$10$hashseed0000000000000025', '2025-09-10 13:00:00', 'Sempre com uma piada pronta.',         FALSE, FALSE);
+
+
+INSERT INTO tweets (id_tweet, id_usuario, conteudo, data_publicacao) VALUES
+(1, 3,  'Acabei de testar o novo framework, mudou minha forma de programar.', '2026-04-05 10:00:00'),
+(2, 7,  'Design minimalista é sobre remover, não adicionar.',                 '2026-04-10 11:00:00'),
+(3, 12, 'Ninguém fala sobre como café ruim estraga o dia inteiro.',           '2026-04-15 12:00:00'),
+(4, 2,  'Trabalho remoto exige mais disciplina do que liberdade.',           '2026-04-20 13:00:00'),
+(5, 18, 'Terminei de ler um livro incrível sobre hábitos.',                  '2026-04-25 14:00:00'),
+(6, 9,  'A cidade acorda diferente quando chove de manhã.',                  '2026-05-01 08:00:00'),
+(7, 21, 'Times pequenos entregam mais rápido quando confiam uns nos outros.','2026-05-05 09:00:00'),
+(8, 4,  'Ninguém te ensina a lidar com burnout na faculdade.',               '2026-03-01 10:00:00'),
+(9, 6,  'Reaprendendo matemática básica depois de anos.',                    '2026-03-10 11:00:00'),
+(10,14, 'Testando uma nova rotina de estudos, resultados em breve.',         '2026-03-15 12:00:00'),
+(11,8,  'Café da tarde com amigos é terapia barata.',                        '2026-05-10 15:00:00'),
+(12,16, 'Documentação boa vale mais que código bonito.',                     '2026-05-15 16:00:00'),
+(13,19, 'Chuva forte hoje, ninguém saiu de casa.',                           '2026-05-20 17:00:00'),
+(14,23, 'Reorganizei minha mesa de trabalho, produtividade lá em cima.',     '2026-05-25 18:00:00'),
+(15,10, 'Publicando hoje o esboço do projeto final de banco de dados.',      '2026-06-02 09:00:00'),
+(16,10, 'Dúvida rápida: alguém já usou Supabase em produção?',               '2026-06-05 10:00:00'),
+(17,10, 'Revisando o diagrama ER pela terceira vez essa semana.',            '2026-06-08 11:00:00'),
+(18,10, 'Normalização até a terceira forma normal, sem arrependimentos.',    '2026-06-11 12:00:00'),
+(19,10, 'Testando queries de agregação para o relatório final.',             '2026-06-14 13:00:00'),
+(20,10, 'Pequena atualização: seeds de dados quase prontos.',                '2026-06-17 14:00:00'),
+(21,10, 'Semana cheia, mas o projeto está saindo do papel.',                 '2026-06-20 15:00:00'),
+(22,5,  'Minha lista de séries pra maratonar no fim de semana.',             '2026-06-01 08:00:00'),
+(23,11, 'Alguém mais acha que segunda-feira deveria ser opcional?',          '2026-06-03 09:00:00'),
+(24,13, 'Comecei a correr de manhã, dia 3 e já dói tudo.',                   '2026-06-06 10:00:00'),
+(25,17, 'Receita nova de macarrão que ficou surpreendentemente boa.',        '2026-06-09 11:00:00'),
+(26,22, 'Trabalhando em um projeto pessoal nas horas vagas.',                '2026-06-12 12:00:00'),
+(27,24, 'Alguém recomenda um bom curso de inglês online?',                   '2026-06-15 13:00:00'),
+(28,25, 'Sexta-feira chegando e eu aqui pensando em código.',                '2026-06-18 14:00:00');
+
+
+INSERT INTO retweets (id_usuario, id_tweet, data_retweet) VALUES
+-- tweet 1: 9 retweets em junho
+(2,1,'2026-06-02 08:00:00'),(4,1,'2026-06-03 08:00:00'),(5,1,'2026-06-04 08:00:00'),(6,1,'2026-06-05 08:00:00'),
+(8,1,'2026-06-06 08:00:00'),(9,1,'2026-06-07 08:00:00'),(11,1,'2026-06-08 08:00:00'),(13,1,'2026-06-09 08:00:00'),(14,1,'2026-06-10 08:00:00'),
+-- tweet 2: 7 retweets em junho
+(3,2,'2026-06-03 09:00:00'),(4,2,'2026-06-05 09:00:00'),(5,2,'2026-06-07 09:00:00'),(7,2,'2026-06-09 09:00:00'),
+(10,2,'2026-06-11 09:00:00'),(12,2,'2026-06-13 09:00:00'),(16,2,'2026-06-15 09:00:00'),
+-- tweet 3: 6 retweets em junho
+(2,3,'2026-06-04 10:00:00'),(6,3,'2026-06-06 10:00:00'),(8,3,'2026-06-08 10:00:00'),
+(9,3,'2026-06-10 10:00:00'),(15,3,'2026-06-12 10:00:00'),(20,3,'2026-06-14 10:00:00'),
+-- tweet 4: 5 retweets em junho
+(3,4,'2026-06-05 11:00:00'),(7,4,'2026-06-07 11:00:00'),(11,4,'2026-06-09 11:00:00'),(17,4,'2026-06-11 11:00:00'),(19,4,'2026-06-13 11:00:00'),
+-- tweet 5: 4 retweets em junho
+(4,5,'2026-06-06 12:00:00'),(9,5,'2026-06-08 12:00:00'),(13,5,'2026-06-10 12:00:00'),(22,5,'2026-06-12 12:00:00'),
+-- tweet 6: 2 retweets em junho (não deve entrar no top 5)
+(5,6,'2026-06-07 13:00:00'),(10,6,'2026-06-09 13:00:00'),
+-- tweet 7: 1 retweet em junho
+(6,7,'2026-06-08 14:00:00'),
+-- tweet 10: 2 retweets em junho (ruído de baixo volume)
+(8,10,'2026-06-10 15:00:00'),(12,10,'2026-06-12 15:00:00'),
+-- tweet 11: 1 retweet em junho
+(16,11,'2026-06-11 16:00:00'),
+-- tweet 8: 10 retweets, mas em MAIO/2026 -> fora da janela, não deve aparecer no top 5 de junho
+(1,8,'2026-05-05 10:00:00'),(2,8,'2026-05-06 10:00:00'),(3,8,'2026-05-07 10:00:00'),(5,8,'2026-05-08 10:00:00'),(6,8,'2026-05-09 10:00:00'),
+(7,8,'2026-05-10 10:00:00'),(9,8,'2026-05-11 10:00:00'),(10,8,'2026-05-12 10:00:00'),(12,8,'2026-05-13 10:00:00'),(13,8,'2026-05-14 10:00:00'),
+-- tweet 9: 3 retweets, mas em JULHO/2026 -> fora da janela de junho
+(2,9,'2026-07-02 10:00:00'),(3,9,'2026-07-03 10:00:00'),(4,9,'2026-07-04 10:00:00');
+
+-- =========================================================
+-- COMENTARIOS
+-- Ranking esperado dos tweets do usuário 10 em julho/2026:
+-- tweet15(8) > tweet16(6) > tweet17(5) > tweet18(4) > tweet19(3)
+-- =========================================================
+INSERT INTO comentarios (id_usuario, id_tweet, conteudo, data_comentario) VALUES
+-- tweet 15: 8 comentários em julho
+(1,15,'Muito bom, quero ver o resultado final!','2026-07-01 09:00:00'),
+(2,15,'Ficou bem organizado.','2026-07-02 09:00:00'),
+(3,15,'Já testou com dados maiores?','2026-07-03 09:00:00'),
+(4,15,'Curti a modelagem.','2026-07-04 09:00:00'),
+(5,15,'Vai disponibilizar o repositório?','2026-07-05 09:00:00'),
+(6,15,'Excelente trabalho!','2026-07-06 09:00:00'),
+(7,15,'Isso vai ajudar muita gente.','2026-07-07 09:00:00'),
+(8,15,'Compartilha o diagrama depois?','2026-07-08 09:00:00'),
+-- tweet 16: 6 comentários em julho
+(9,16,'Uso Supabase sim, funciona bem.','2026-07-02 10:00:00'),
+(11,16,'Depende da carga, mas recomendo.','2026-07-03 10:00:00'),
+(12,16,'Já tive problema com RLS lá.','2026-07-04 10:00:00'),
+(13,16,'Boa pergunta, também tenho dúvida.','2026-07-05 10:00:00'),
+(14,16,'Funciona bem pra projetos pequenos.','2026-07-06 10:00:00'),
+(16,16,'Vale a pena testar o free tier.','2026-07-07 10:00:00'),
+-- tweet 17: 5 comentários em julho
+(17,17,'Diagrama ER é sempre um sofrimento gostoso.','2026-07-03 11:00:00'),
+(18,17,'Mostra a versão final depois?','2026-07-04 11:00:00'),
+(19,17,'Ficou bem claro pelo que vi.','2026-07-05 11:00:00'),
+(20,17,'Boa, revisar várias vezes vale a pena.','2026-07-06 11:00:00'),
+(21,17,'Curioso pra ver o resultado.','2026-07-07 11:00:00'),
+-- tweet 18: 4 comentários em julho
+(22,18,'3FN é o mínimo mesmo.','2026-07-04 12:00:00'),
+(23,18,'Boa disciplina de modelagem.','2026-07-05 12:00:00'),
+(24,18,'Isso evita muita dor de cabeça depois.','2026-07-06 12:00:00'),
+(25,18,'Gostei da abordagem.','2026-07-07 12:00:00'),
+-- tweet 19: 3 comentários em julho
+(2,19,'Queries de agregação sempre dão trabalho.','2026-07-05 13:00:00'),
+(5,19,'Mostra um exemplo depois?','2026-07-06 13:00:00'),
+(8,19,'Boa sorte com o relatório!','2026-07-07 13:00:00'),
+-- tweet 20: 1 comentário em julho (não deve entrar no top 5)
+(3,20,'Quase lá!','2026-07-06 14:00:00'),
+-- tweet 21: 1 comentário em julho
+(4,21,'Reta final, força!','2026-07-06 15:00:00'),
+-- Ruído: mais 5 comentários no tweet 15, mas em JUNHO/2026 -> fora da janela de julho
+(6,15,'Primeira impressão muito boa.','2026-06-25 09:00:00'),
+(7,15,'Vai continuar postando updates?','2026-06-26 09:00:00'),
+(8,15,'Interessante a abordagem.','2026-06-27 09:00:00'),
+(9,15,'Aguardando a versão final.','2026-06-28 09:00:00'),
+(11,15,'Bom trabalho até aqui.','2026-06-29 09:00:00'),
+-- Ruído: tweet 22 é de OUTRO usuário (id 5, não é o 10), com 9 comentários em julho
+-- (não deve aparecer no ranking do usuário 10, mesmo tendo mais comentários que o tweet 15)
+(1,22,'Também assisto essa!','2026-07-01 08:00:00'),
+(2,22,'Recomendo demais.','2026-07-02 08:00:00'),
+(3,22,'Vou adicionar na minha lista.','2026-07-03 08:00:00'),
+(4,22,'Qual sua favorita?','2026-07-04 08:00:00'),
+(6,22,'Maratonei tudo em um fim de semana.','2026-07-05 08:00:00'),
+(7,22,'Segunda temporada é ainda melhor.','2026-07-06 08:00:00'),
+(8,22,'Adicionei à watchlist.','2026-07-07 08:00:00'),
+(9,22,'Assisti com a família, curtimos.','2026-07-08 08:00:00'),
+(11,22,'Faz tempo que não via algo tão bom.','2026-07-09 08:00:00');
+
+
+INSERT INTO curtidas (id_usuario, id_tweet, data_curtida) VALUES
+(1,15,'2026-07-01 09:10:00'),(2,15,'2026-07-01 09:20:00'),(3,16,'2026-07-02 10:10:00'),
+(4,16,'2026-07-02 10:20:00'),(5,17,'2026-07-03 11:10:00'),(6,17,'2026-07-03 11:20:00'),
+(7,18,'2026-07-04 12:10:00'),(8,18,'2026-07-04 12:20:00'),(9,19,'2026-07-05 13:10:00'),
+(10,1,'2026-06-02 08:10:00'),(11,2,'2026-06-03 09:10:00'),(12,3,'2026-06-04 10:10:00'),
+(13,4,'2026-06-05 11:10:00'),(14,5,'2026-06-06 12:10:00'),(15,6,'2026-05-01 08:10:00'),
+(16,7,'2026-05-05 09:10:00'),(17,8,'2026-03-02 10:10:00'),(18,9,'2026-03-11 11:10:00'),
+(19,22,'2026-06-01 08:10:00'),(20,23,'2026-06-03 09:10:00'),(21,24,'2026-06-06 10:10:00'),
+(22,25,'2026-06-09 11:10:00'),(23,26,'2026-06-12 12:10:00'),(24,27,'2026-06-15 13:10:00'),(25,28,'2026-06-18 14:10:00');
+
+
+INSERT INTO seguidores (id_seguidor, id_seguido, data_seguir, status) VALUES
+(1,2,'2025-02-01 09:00:00','aprovado'), (2,3,'2025-02-05 09:00:00','aprovado'),
+(3,4,'2025-02-10 09:00:00','aprovado'), (4,1,'2025-02-15 09:00:00','aprovado'),
+(6,7,'2025-03-05 09:00:00','aprovado'), (7,8,'2025-03-10 09:00:00','aprovado'),
+(8,9,'2025-03-15 09:00:00','aprovado'), (9,10,'2025-04-05 09:00:00','aprovado'),
+(10,11,'2025-04-15 09:00:00','aprovado'), (11,13,'2025-04-25 09:00:00','aprovado'),
+(13,14,'2025-05-15 09:00:00','aprovado'), (14,15,'2025-05-25 09:00:00','aprovado'),
+(16,17,'2025-06-15 09:00:00','aprovado'), (17,18,'2025-06-25 09:00:00','aprovado'),
+(18,19,'2025-07-05 09:00:00','aprovado'), (19,21,'2025-08-05 09:00:00','aprovado'),
+(21,22,'2025-08-15 09:00:00','aprovado'), (22,23,'2025-08-25 09:00:00','aprovado'),
+(23,24,'2025-09-05 09:00:00','aprovado'), (24,25,'2025-09-15 09:00:00','aprovado'),
+(25,1,'2025-09-20 09:00:00','aprovado'),
+-- seguidores de contas privadas (5, 12, 20)
+(1,5,'2025-03-01 09:00:00','aprovado'), (2,5,'2025-03-02 09:00:00','pendente'),
+(3,12,'2025-05-05 09:00:00','aprovado'), (4,12,'2025-05-06 09:00:00','pendente'),
+(6,20,'2025-08-01 09:00:00','aprovado'), (7,20,'2025-08-02 09:00:00','pendente');
+
+
+INSERT INTO favoritos (id_usuario, id_tweet, data_salvo) VALUES
+(1,16,'2026-07-01 15:00:00'),(2,17,'2026-07-02 15:00:00'),(3,18,'2026-07-03 15:00:00'),
+(4,19,'2026-07-04 15:00:00'),(5,20,'2026-07-05 15:00:00'),(6,1,'2026-06-02 15:00:00'),
+(7,2,'2026-06-03 15:00:00'),(8,3,'2026-06-04 15:00:00'),(9,4,'2026-06-05 15:00:00'),
+(10,5,'2026-06-06 15:00:00'),(11,22,'2026-06-01 15:00:00'),(12,23,'2026-06-03 15:00:00');
+
+
+INSERT INTO midias (id_tweet, tipo_midia, url_midia, data_upload) VALUES
+(1, 'imagem','https://cdn.exemplo.com/midias/tweet1_img1.jpg','2026-04-05 10:01:00'),
+(2, 'video', 'https://cdn.exemplo.com/midias/tweet2_video1.mp4','2026-04-10 11:01:00'),
+(5, 'imagem','https://cdn.exemplo.com/midias/tweet5_img1.jpg','2026-04-25 14:01:00'),
+(6, 'gif',   'https://cdn.exemplo.com/midias/tweet6_gif1.gif','2026-05-01 08:01:00'),
+(15,'imagem','https://cdn.exemplo.com/midias/tweet15_img1.jpg','2026-06-02 09:01:00'),
+(17,'imagem','https://cdn.exemplo.com/midias/tweet17_er_diagram.png','2026-06-08 11:01:00'),
+(19,'imagem','https://cdn.exemplo.com/midias/tweet19_query_result.png','2026-06-14 13:01:00'),
+(22,'video', 'https://cdn.exemplo.com/midias/tweet22_video1.mp4','2026-06-01 08:01:00'),
+(25,'imagem','https://cdn.exemplo.com/midias/tweet25_img1.jpg','2026-06-09 11:01:00'),
+(28,'gif',   'https://cdn.exemplo.com/midias/tweet28_gif1.gif','2026-06-18 14:01:00');
+
+SELECT setval(pg_get_serial_sequence('usuarios','id_usuario'), (SELECT MAX(id_usuario) FROM usuarios));
+SELECT setval(pg_get_serial_sequence('tweets','id_tweet'), (SELECT MAX(id_tweet) FROM tweets));
+SELECT setval(pg_get_serial_sequence('comentarios','id_comentario'), (SELECT MAX(id_comentario) FROM comentarios));
+SELECT setval(pg_get_serial_sequence('midias','id_midia'), (SELECT MAX(id_midia) FROM midias));
