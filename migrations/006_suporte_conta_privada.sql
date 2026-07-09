@@ -1,4 +1,4 @@
--- Migração 004: Implementa suporte a contas privadas e fluxo de aprovação de seguidores
+-- Migração 006: Implementa suporte a contas privadas e fluxo de aprovação de seguidores
 
 ALTER TABLE usuarios ADD COLUMN e_privado BOOLEAN NOT NULL DEFAULT FALSE;
 
